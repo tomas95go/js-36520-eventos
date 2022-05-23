@@ -12,21 +12,38 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body class="container" style="height: 100vh">
     <!-- Alumno: González Oviedo Tomás Emiliano -->
     <script type="module" src="./index.js"></script>
-    <section>
-      <div
-        style="height: 100vh"
-        class="container d-flex justify-content-center align-items-center"
-      >
-        <div id="resultado-potencias" class="card">
-          <div id="cuerpo-carta" class="card-body">
-            <h5 id="titulo-carta" class="card-title"></h5>
-            <ul id="lista-potencias" class="list-group"></ul>
+    <header>
+      <h1>Calculadora simple de potencias</h1>
+      <h2>
+        Por favor, elegí un número entero del 1 al 10 y te encuentro las
+        potencias: 1 a la 5.
+      </h2>
+    </header>
+    <main>
+      <section>
+        <form class="row g-3" id="potencia-form">
+          <div class="col-auto">
+            <label for="inputPassword2" class="visually-hidden">Password</label>
+            <input
+              type="number"
+              class="form-control"
+              name="potencia"
+              placeholder="Ingresar potencia"
+            />
           </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">Calcular</button>
+          </div>
+        </form>
+      </section>
+      <section>
+        <div>
+          <div id="resultado-potencias" class="card"></div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
   </body>
 </html>
